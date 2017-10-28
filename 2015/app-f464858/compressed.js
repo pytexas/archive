@@ -626,7 +626,7 @@ pytx.constant('angularMomentConfig', {
 pytx.filter('thumbnail', function() {
   return function (img_url, transforms) {
     if (img_url) {
-      img_url = 'https://pytexas.imgix.net' + img_url;
+      img_url = 'https://pytxarchive.imgix.net/2015' + img_url;
       
       if (transforms) {
         img_url += '?' + transforms;
