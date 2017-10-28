@@ -11,16 +11,6 @@
   <!--<li id="notif-button">
     
   </li>-->
-  <li ng-hide="logged_in">
-    <md-button href="/{{ conf }}/user/login">
-      Login
-    </md-button>
-  </li>
-  <li ng-show="logged_in">
-    <md-button ng-click="logout()">
-      Logout
-    </md-button>
-  </li>
 </ul>
 <hr>
 <div class="sponsors-side-list" ng-if="sponsor_levels.length > 0">

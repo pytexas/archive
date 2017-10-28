@@ -609,12 +609,6 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
       {title: 'Mailing List', url: 'community/mailing-list.html'},
       {title: 'Local Python Meetups', url: 'community/meetups.html'},
       {title: 'Python Employers', url: 'community/employers.html'}
-    ]],
-    ['Blog', {url: 'blog'}],
-    ['My Account', [
-      {title: 'My Talks', url: 'user/my-talks.html'},
-      {title: 'Profile', url: 'user/my-profile.html'},
-      {title: 'Profile Image', url: 'user/my-avatar.html'}
     ]]
   ];
 });
