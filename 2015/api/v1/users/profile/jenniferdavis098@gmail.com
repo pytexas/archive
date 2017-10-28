@@ -1,0 +1,1 @@
+{"username":"jenniferdavis098@gmail.com","name":"Jennifer Davis","image":"https://secure.gravatar.com/avatar/be05c840f258db739669a56727de61eb.jpg?s=256&d=retro&r=g","biography":"","website":"","social_handles":[{"username":"jddavis-100","site":"github"}]}
