@@ -36,7 +36,9 @@ def run (fps):
     # html = re.sub('<.*?shortcut icon.*?>', new_favi, html)
     
     # html = re.sub('=".*?external\.html\?link=(.*?)"', replace_external, html)
-    html = re.sub("='.*?external\.html\?link=(.*?)'", replace_external2, html)
+    # html = re.sub("='.*?external\.html\?link=(.*?)'", replace_external2, html)
+    
+    html = re.sub('[\./]+/secure.gravatar.com/', 'https://secure.gravatar.com/', html)
     
     with open(fp, 'w') as fh:
       fh.write(html)
