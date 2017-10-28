@@ -1,0 +1,33 @@
+{
+  "name": "PyTexasWeb",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pytexas/PyTexasWeb",
+  "authors": [
+    "Paul Bailey <paul.m.bailey@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.0",
+    "angular-route": "~1.4.4",
+    "angular-sanitize": "~1.4.4",
+    "angular-cookies": "~1.4.4",
+    "font-awesome": "~4.4.0",
+    "angular-marked": "~0.0.16",
+    "moment": "~2.10.3",
+    "angular-moment": "~0.10.1",
+    "moment-timezone": "~0.4.0",
+    "angulartics": "~0.19.0",
+    "angular-jwt": "~0.0.9"
+  },
+  "resolutions": {
+    "angular": "1.4.4"
+  }
+}

@@ -1,0 +1,28 @@
+<div class="content-page">
+  <h1>Submit A Talk</h1>
+  <div ng-show="thanks">
+    <h3>Your talk submissions has been successfully submitted.</h3>
+    <p>
+      <br>
+      <md-button class="md-raised md-primary" ng-click="reset()">
+        <i class="fa fa-caret-square-o-right"></i> Submit Another Talk
+      </md-button>
+    </p>
+  </div>
+  <div ng-show="closed">
+    <h2>Talk Submissions are Closed</h2>
+  </div>
+  <div ng-hide="thanks || closed">
+    <p>
+      Please fill out the following information about your talk.
+      <br>If you have any questions feel free to e-mail us at 
+      <a href="mailto: conference@pytexas.org">conference@pytexas.org</a>.
+    </p>
+    <form name="talkForm" class="norm-form" ng-submit="do_submit()">
+      <div ng-include="tpl('speakers/talk-inputs.html')"></div>
+      <md-button class="md-raised md-primary button">
+        <i class="fa fa-caret-square-o-right"></i> Submit
+      </md-button>
+    </form>
+  </div>
+</div>

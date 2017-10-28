@@ -1,0 +1,65 @@
+<div class="HomeCtrl">
+  <div class="header" layout="row" layout-align="center center">
+    <h1>PyTexas 2015</h1>
+  </div>
+  <div class="message">
+    <p>
+      September 25th-27th, 2015 in the Memorial Student Center, 
+      at Texas A&M University
+    </p>
+    <p>
+      Thanks for another great conference!
+    </p>
+    <p>
+      <a href="https://twitter.com/pytexas/lists/2015-speakers">2015 Speaker List</a>
+      &nbsp; -&nbsp; 
+      <a href="https://twitter.com/pytexas/lists/2015-attendees">2015 Attendees List</a>
+    </p>
+  </div>
+  <div class="body tc">
+    <div class="treble">
+      <h2>
+        <a href="/{{ conf }}/videos">
+          <i class="fa fa-video-camera fa-3x"></i><br>
+          Videos
+        </a>
+      </h2>
+    </div>
+    <div class="bass">
+      <h2>
+        <a href="https://gitter.im/pytexas/PyTexas">
+          <i class="fa fa-commenting fa-3x"></i><br>
+          Chat Room
+        </a>
+      </h2>
+    </div>
+    <div class="treble">
+      <h2>
+        <a href="https://twitter.com/pytexas">
+          <i class="fa fa-twitter fa-3x"></i><br>
+          Follow Us
+        </a>
+      </h2>
+    </div>
+  </div>
+  <div class="latest-post" ng-if="latest_post">
+    <h3>Latest Blog Post</h3>
+    <md-list>
+      <md-list-item class="md-3-line post" ng-repeat="post in [latest_post]">
+        <ng-include src="tpl('blog/post-list-item.html')"></ng-include>
+      </md-list-item>
+    </md-list>
+  </div>
+  <div class="sponsors-list" ng-if="sponsor_levels.length > 0">
+    <div class="level" ng-repeat="level in sponsor_levels">
+      <div ng-if="level.sponsors.length > 0">
+        <h2>{{ level.name }} Sponsors</h2>
+        <div layout="row" layout-align="center center" layout-wrap>
+          <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
+            <img src="{{ sponsor.logo | thumbnail:'w=250&h=250' }}" alt="{{ sponsor.name }}">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

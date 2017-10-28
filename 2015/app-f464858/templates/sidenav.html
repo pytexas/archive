@@ -1,0 +1,35 @@
+<ul class="menu">
+  <li ng-repeat="menu_item in menu">
+    <menu-collapse ng-if="!menu_item[1].url && !menu_item[1].fullurl" title="menu_item[0]" items="menu_item[1]" conf="conf"></menu-collapse>
+    <md-button ng-if="menu_item[1].url" href="/{{ conf }}/{{ menu_item[1].url }}">
+      {{ menu_item[0] }}
+    </md-button>
+    <md-button ng-if="menu_item[1].fullurl" href="{{ menu_item[1].fullurl }}">
+      {{ menu_item[0] }}
+    </md-button>
+  </li>
+  <!--<li id="notif-button">
+    
+  </li>-->
+  <li ng-hide="logged_in">
+    <md-button href="/{{ conf }}/user/login">
+      Login
+    </md-button>
+  </li>
+  <li ng-show="logged_in">
+    <md-button ng-click="logout()">
+      Logout
+    </md-button>
+  </li>
+</ul>
+<hr>
+<div class="sponsors-side-list" ng-if="sponsor_levels.length > 0">
+  <h3>Our Sponsors</h3>
+  <div class="level" ng-repeat="level in sponsor_levels">
+    <div layout="row" layout-align="start start" layout-wrap>
+      <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
+        <img src="{{ sponsor.logo | thumbnail:'w=150&h=80' }}" alt="{{ sponsor.name }}">
+      </a>
+    </div>
+  </div>
+</div>

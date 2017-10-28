@@ -1,0 +1,527 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+body p,
+html p {
+  line-height: 1.4;
+  margin: 0.3em 0 1.2em 0;
+}
+ul,
+ol {
+  margin: 0.3em 0 1.2em 0;
+}
+ul li,
+ol li {
+  margin-bottom: 0.3em;
+}
+md-icon {
+  width: 40px;
+  height: 40px;
+}
+md-progress-circular {
+  margin: 0 auto;
+}
+a {
+  color: #3e7cb3;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 2px;
+}
+body h2,
+html h2 {
+  margin: 1.3em 0 0.3em 0;
+}
+body h3,
+html h3,
+body h4,
+html h4 {
+  margin: 1.3em 0 0.3em 0;
+}
+md-toolbar.md-default-theme {
+  background-color: #1e2933;
+}
+md-toolbar.md-default-theme h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+md-toolbar.md-default-theme a.logo {
+  display: flex;
+}
+md-toolbar.md-default-theme a.logo img {
+  height: 48px;
+}
+md-toolbar.md-default-theme a.logo span {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 208px;
+}
+md-toolbar.md-default-theme .hamburger a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px 0 0;
+}
+@media (max-width: 960px) {
+  md-toolbar.md-default-theme a.logo span {
+    left: 260px;
+  }
+}
+@media (max-width: 400px) {
+  md-toolbar.md-default-theme a.logo img {
+    height: 40px;
+  }
+  md-toolbar.md-default-theme a.logo span {
+    left: 228px;
+  }
+  md-toolbar.md-default-theme h2 {
+    font-size: 1.2rem;
+  }
+}
+md-sidenav.md-locked-open {
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+}
+md-sidenav {
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+}
+md-sidenav ul.menu {
+  margin: 0;
+  padding: 5px 0;
+}
+md-sidenav ul.menu li {
+  margin: 0;
+  display: block;
+}
+md-sidenav ul.menu ul {
+  margin: 0;
+  padding: 0;
+}
+md-sidenav ul.menu ul .md-button {
+  padding-left: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+md-sidenav ul.menu .md-button {
+  width: 100%;
+  text-align: left;
+  display: block;
+  padding-left: 12px;
+  margin: 0;
+  font-size: inherit;
+}
+md-sidenav hr {
+  margin: 10px 0;
+}
+.menu-collapse > div {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.menu-collapse a.md-button {
+  text-transform: none;
+  font-size: 90%;
+}
+.menu-collapse > .md-button {
+  position: relative;
+}
+.menu-collapse > .md-button:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  right: 20px;
+  position: absolute;
+  font-weight: bold;
+  margin-top: 2px;
+  transition: transform 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.menu-collapse > .md-button.open:after {
+  transform: rotate(180deg);
+}
+footer {
+  margin: 40px 0 20px 0;
+  display: block;
+  text-align: center;
+  font-size: 80%;
+}
+.ErrorCtrl img {
+  display: block;
+  margin: 0 auto;
+}
+hr {
+  border: 0;
+  border-top: 1px dotted #b6b6b6;
+  margin: 1em 0;
+}
+.md-button.md-default-theme.md-primary.md-raised,
+.md-button.md-default-theme.md-primary.md-fab {
+  background-color: #3e7cb3;
+  color: #ffffff;
+}
+.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover,
+.md-button.md-default-theme.md-primary.md-raised:not([disabled]):focus,
+.md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover,
+.md-button.md-default-theme.md-primary.md-fab:not([disabled]):focus {
+  background-color: #ffdd00;
+  color: #3e7cb3;
+}
+form.norm-form input,
+form.norm-form textarea {
+  max-width: 500px;
+}
+form.norm-form md-select {
+  margin: 0;
+  max-width: 300px;
+}
+form.norm-form .label {
+  color: rgba(0, 0, 0, 0.26);
+}
+form.norm-form fieldset {
+  border: 1px dotted #b6b6b6;
+  margin: 0 0 30px 0;
+}
+form.norm-form fieldset legend {
+  color: #b6b6b6;
+  padding: 0 15px;
+}
+form.norm-form .md-button em {
+  font-size: 80%;
+}
+.loading {
+  margin: 40px 0;
+}
+.clickme {
+  cursor: pointer;
+}
+.tc {
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.error-color {
+  color: #cf2121;
+}
+.md-list-item-text h3 {
+  margin: 0;
+  font-weight: 600;
+}
+.md-list-item-text h4 {
+  margin: 0;
+  font-weight: 500;
+}
+.sponsors-list h2 {
+  text-align: center;
+}
+.sponsors-list .level a {
+  display: block;
+  margin: 15px;
+}
+.sponsors-side-list {
+  padding: 10px;
+}
+.sponsors-side-list h3 {
+  margin: 0 0 10px 0;
+}
+.sponsors-side-list a {
+  display: block;
+  margin: 0 7px 20px 7px;
+}
+.sponsors-side-list a img {
+  display: block;
+  width: 92px;
+}
+.view-animate.ng-enter,
+.view-animate.ng-leave {
+  -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+}
+.view-animate.ng-enter {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  opacity: 0;
+}
+.view-animate.ng-enter.ng-enter-active {
+  transform: perspective(300px) rotateY(0deg);
+  -ms-transform: perspective(300px) rotateY(0deg);
+  -webkit-transform: perspective(300px) rotateY(0deg);
+  opacity: 1;
+}
+.view-animate.ng-leave {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  opacity: 1;
+}
+.view-animate.ng-leave.ng-leave-active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  opacity: 0;
+}
+.HomeCtrl {
+  background-image: url(../img/banner-msc-4.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.HomeCtrl .header {
+  text-align: center;
+  height: 200px;
+}
+.HomeCtrl h1 {
+  display: flex;
+  margin: 0;
+  color: #ffffff;
+  background-color: #1e2933;
+  background-color: rgba(30, 41, 51, 0.75);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.HomeCtrl .message {
+  text-align: center;
+}
+.HomeCtrl .body {
+  margin: 30px 0;
+}
+.HomeCtrl .body > div {
+  display: inline-block;
+  height: 0px;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  margin: 0 0 15px 0;
+  width: 215px;
+  box-sizing: border-box;
+}
+.HomeCtrl .body > div.bass {
+  border-bottom: 125px solid #3e7cb3;
+}
+.HomeCtrl .body > div.treble {
+  border-top: 125px solid #3e7cb3;
+  position: relative;
+}
+.HomeCtrl .body > div.treble h2 {
+  position: absolute;
+  top: -125px;
+}
+.HomeCtrl .body > div h2 {
+  font-size: 1.0rem;
+  margin: 0;
+  width: 135px;
+}
+.HomeCtrl .body > div h2 a {
+  color: #ffdd00;
+  display: block;
+  padding: 20px 0;
+}
+@media (min-width: 450px) and (max-width: 710px) {
+  .HomeCtrl .body > div {
+    margin: 0 60px 15px 60px;
+  }
+}
+@media (max-width: 400px) {
+  .HomeCtrl h1 {
+    font-size: 1.8em;
+  }
+}
+.loginPage .tc {
+  max-width: 500px;
+  margin: 30px 0 20px 0;
+  font-style: italic;
+  font-size: 90%;
+}
+.loginPage .signup {
+  text-align: right;
+  max-width: 500px;
+}
+.loginPage .signup span {
+  font-style: italic;
+}
+.AvatarPage .images img {
+  display: block;
+  margin: 0 0 10px 0;
+  width: 128px;
+}
+.AvatarPage .images em {
+  font-size: 80%;
+}
+.content-page {
+  max-width: 1024px;
+}
+.content-page h1 {
+  background-image: url(../img/banner-msc-4.png);
+  margin: 0 0 30px 0;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1000px rgba(30, 41, 51, 0.7);
+}
+.content-page img {
+  max-width: 100%;
+}
+.TalkList .tab-content ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.TalkList .tab-content ul li {
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: block;
+}
+.TalkList .tab-content ul li h3 {
+  margin: 0 0 5px 0;
+}
+.TalkList .tab-content ul li img {
+  width: 64px;
+  display: block;
+  float: left;
+  margin: 0 20px 0 0;
+}
+.Talk a.user img {
+  display: block;
+  float: right;
+  width: 25%;
+  max-width: 256px;
+  margin: 0 0 20px 20px;
+}
+.Talk .details {
+  list-style-type: none;
+  padding: 0;
+}
+.Talk .details div {
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+.Talk h4 {
+  margin-top: 0;
+}
+.Talk .desc {
+  margin-left: 15px;
+}
+.Talk .desc a.md-button {
+  margin-right: 30px;
+  padding: 10px 20px;
+}
+.Schedule .schedule {
+  margin: 5px 0 0 0;
+}
+.Schedule .talk {
+  padding: 10px;
+  margin: 5px;
+  background-color: #e2ecf5;
+  border-radius: 2px;
+  -ms-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+.Schedule .talk h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+.Schedule .talk ul {
+  margin: 0 0 0 13px;
+  padding: 0;
+  list-style-type: none;
+}
+.Schedule .talk ul li {
+  padding: 0 0 3px 0;
+  margin: 0;
+  font-size: 90%;
+}
+md-list-item.post {
+  border-bottom: 1px dotted #b6b6b6;
+  display: block;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+md-list-item.post:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+md-list-item.post h3 {
+  margin: 0 0 5px 0;
+}
+md-list-item.post h4 {
+  margin: 0 0 5px 0;
+  font-weight: normal;
+  font-size: 85%;
+  font-style: italic;
+}
+md-list-item.post img {
+  float: left;
+  display: block;
+  padding: 0 15px 15px 0;
+  max-width: 80px;
+  max-height: 80px;
+}
+.Posts .pagination {
+  padding: 10px 0;
+}
+.Post h1 a {
+  color: #ffdd00;
+}
+.Post .date {
+  font-style: italic;
+  font-size: 90%;
+  margin: 0 0 7px 0;
+}
+.Post .authors,
+.Post .cats {
+  margin: 0 0 7px 0;
+}
+.Post .authors > span,
+.Post .cats > span {
+  margin: 0 5px 0 0;
+}
+.Post .authors > span:after,
+.Post .cats > span:after {
+  content: ", ";
+}
+.Post .authors > span:last-child:after,
+.Post .cats > span:last-child:after {
+  content: "";
+}
+.Post .body {
+  margin: 10px 0 0 0;
+}
+.Post .body > h2:first-child,
+.Post .body > h3:first-child {
+  margin-top: 0;
+}
+.Post .main-img {
+  float: right;
+  max-width: 45%;
+  padding: 0 0 20px 20px;
+}

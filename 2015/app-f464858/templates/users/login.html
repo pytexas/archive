@@ -1,0 +1,28 @@
+<div class="content-page loginPage">
+  <h1>Login</h1>
+  <div class="signup">
+    <span>Don't have an account?</span>&nbsp;&nbsp; 
+    <md-button href="/{{ conf }}/user/sign-up?next={{ next }}" class="md-raised">
+      <i class="fa fa-angle-double-right"></i> Sign Up
+    </md-button>
+  </div>
+  <form name="loginForm" class="norm-form" ng-submit="do_login()">
+    <md-input-container>
+      <label>Username</label>
+      <input ng-model="form.username" required>
+      <div ng-messages="errors" class="error-color">
+        <div ng-message="errors.username">{{ errors.username[0] }}</div>
+      </div>
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input type="password" ng-model="form.password" required>
+    </md-input-container>
+    <md-button class="md-raised md-primary button">
+      <i class="fa fa-caret-square-o-right"></i> Login
+    </md-button>
+  </form>
+  <div class="tc">
+    <a href="/{{ conf }}/user/reset-password">Forgot Your Password?</a>
+  </div>
+</div>

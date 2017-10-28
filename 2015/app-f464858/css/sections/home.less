@@ -1,0 +1,83 @@
+.HomeCtrl {
+  background-image: url(../img/banner-msc-4.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  
+  .header {
+    text-align: center;
+    height: 200px;
+  }
+  
+  h1 {
+    display: flex;
+    margin: 0;
+    color: @textPrimaryColor;
+    background-color: @primaryColor;
+    background-color: fade(@primaryColor, 75%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 500;
+  }
+  
+  .message {
+    text-align: center;
+  }
+  
+  .body {
+    margin: 30px 0;
+    
+    > div {
+      display: inline-block;
+      height: 0px; 
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      margin: 0 0 15px 0;
+      width: 215px;
+      box-sizing: border-box;
+      
+      &.bass {
+        border-bottom: 125px solid @accentColor2;
+      }
+      
+      &.treble {
+        border-top: 125px solid @accentColor2;
+        position: relative;
+        
+        h2 {
+          position: absolute;
+          top: -125px;
+        }
+      }
+      
+      h2 {
+        font-size: 1.0rem;
+        margin: 0;
+        width: 135px;
+        
+        a {
+          color: @accentColor;
+          display: block;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 450px) and (max-width: 710px) {
+  .HomeCtrl {
+    .body {
+      > div {
+        margin: 0 60px 15px 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .HomeCtrl {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+}

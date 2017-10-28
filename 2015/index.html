@@ -1,0 +1,110 @@
+<!doctype html>
+<html ng-app="pytx">
+  <head>
+    <title ng-bind="title">PyTexas 2015</title>
+    <meta name="viewport" content="initial-scale=1">
+    <script>
+      var CONFIG = {
+        dir: '/2015/app-f464858/',
+        conf: '2015',
+        api_base: '/2015/'
+      }
+    </script>
+    
+    <link rel="stylesheet" href="/2015/app-f464858/bower/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/2015/app-f464858/bower/font-awesome/css/font-awesome.min.css">
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700' rel='stylesheet' type='text/css'>
+    
+    <meta name="theme-color" content="#1e2933">
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <meta name="application-name" content="PyTexas 2015">
+    
+    <link rel="icon" sizes="192x192" href="/2015/app-f464858/logo192.png">
+    <link rel="shortcut icon" href="/2015/app-f464858/logo72.png">
+    
+    <link rel="apple-touch-icon" href="/2015/app-f464858/logo48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/2015/app-f464858/logo72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="/2015/app-f464858/logo96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/2015/app-f464858/logo144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/2015/app-f464858/logo192.png">
+    
+    <link rel="stylesheet" href="/2015/app-f464858/css/pytx.css">
+    
+    <base href="/2015/">
+  </head>
+  <body layout="row">
+    <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="leftnav" md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar layout="row" layout-align="center center">
+        <div class="close-menu" hide-gt-md>
+          <md-button ng-click="toggle_side()">
+            <i class="fa fa-times"></i> Close Menu
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content>
+        <div ng-include="tpl('sidenav.html')"></div>
+      </md-content>
+    </md-sidenav>
+    <div layout="column" layout-fill role="main">
+      <md-toolbar>
+        <div class="md-toolbar-tools header">
+          <div hide-gt-md class="hamburger">
+            <a aria-label="Toggle Menu" ng-click="toggle_side()" class="clickme">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div flex>
+            <h2 layout="row" layout-align="start center">
+              <a href="/2015/" class="logo">
+                <img ng-src="{{ img_path('banner80.png') }}" alt="PyTexas">
+                <span>2015</span>
+              </a>
+            </h2>
+          </div>
+        </div>
+      </md-toolbar>
+      <md-content md-scroll-y flex class="main-content md-padding" id="main-content">
+        <div class="view-animate-container">
+          <div ng-view class="view-animate">Nothing to see here</div>
+        </div>
+        <footer>
+          <a href="/2015/about/privacy-policy">Privacy Policy</a>&nbsp; |&nbsp; 
+          <a href="/2015/about/code-of-conduct">Code of Conduct</a>&nbsp; |&nbsp; 
+          Build: f464858
+        </footer>
+      </md-content>
+    </div>
+    
+    <script src="/2015/app-f464858/compressed.js"></script>
+    
+    <!--
+    <script src='//cdn.goroost.com/roostjs/e5j424mqd808dcaifhv1od0gt9v9dpb6' async></script>
+    <script>
+      var _roost = _roost || [];
+      _roost.push(['autoprompt', false]);
+      _roost.push(['onload', function(data) {
+        if (data.promptable) {
+          var element = document.querySelector("#notif-button");
+          element.innerHTML = '<a class="md-button md-default-theme" href="#" onclick="_roost.prompt();"><span class="ng-scope">Enable Notifications</span></a>';
+        }
+      }]);
+      _roost.push(['onresult', function(data) {
+        if (data.enabled) {
+          var element = document.querySelector("#notif-button");
+          element.remove();
+        }
+      }]);
+    </script>
+    -->
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-51684942-1', 'auto');
+    </script>
+    <!--prod-end-->
+  </body>
+</html>

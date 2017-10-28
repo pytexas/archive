@@ -1,0 +1,13 @@
+{
+  "short_name": "PyTexas 2015",
+  "name": "PyTexas 2015",
+  "icons": [
+    {
+      "src": "/2015/logo144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/2015/?app=1",
+  "display": "browser"
+}

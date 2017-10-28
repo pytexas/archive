@@ -1,0 +1,23 @@
+<div class="Posts content-page">
+  <h1>{{ data.title }}</h1>
+  <div class="posts">
+    <md-list>
+      <md-list-item class="md-3-line post" ng-repeat="post in data.posts">
+        <ng-include src="tpl('blog/post-list-item.html')"></ng-include>
+      </md-list-item>
+    </md-list>
+    <div class="pagination">
+      <div class="pull-left" ng-if="data.prev">
+        <md-button class="md-raised md-primary" href="blog?page={{ data.prev }}">
+          &laquo; Previous
+        </md-button>
+      </div>
+      <div class="pull-right" ng-if="data.next">
+        <md-button class="md-raised md-primary" href="blog?page={{ data.next }}">
+          Next &raquo;
+        </md-button>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
