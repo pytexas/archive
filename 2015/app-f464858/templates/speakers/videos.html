@@ -7,15 +7,15 @@
     <div class="tab-content">
       <ul>
         <li ng-repeat="video in videos">
-          <a href="/{{ conf }}/user/{{ video.speaker.username }}">
+          <a href="/{{ conf }}/user/{{ video.speaker.username }}.html">
             <img src="{{ video.speaker.image }}" alt="">
           </a>
           <h3>
             <a href="{{ video.video_url }}">{{ video.name }}</a>
           </h3>
-          by <a href="/{{ conf }}/user/{{ video.speaker.username }}">{{ video.speaker.username }}</a>
+          by <a href="/{{ conf }}/user/{{ video.speaker.username }}.html">{{ video.speaker.username }}</a>
           &nbsp; &sdot;&nbsp; 
-          <a href="/{{ conf }}/talk/{{ video.id }}">Talk Details &raquo;</a>
+          <a href="/{{ conf }}/talk/{{ video.id }}.html">Talk Details &raquo;</a>
           <div class="clear"></div>
         </li>
       </ul>

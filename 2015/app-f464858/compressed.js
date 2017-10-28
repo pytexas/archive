@@ -585,7 +585,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
       {title: 'Become A Sponsor', url: 'sponsors/prospectus.html'},
       {title: 'Our Sponsors', url: 'sponsors/'},
     ]],
-    ['Schedule', {url: 'schedule.html'}],
+    ['Schedule', {url: 'schedule/'}],
     /*['Speakers', [
       {title: 'Call For Proposals', url: 'speakers/call-for-proposals'},
       {title: 'Submit A Talk', url: 'speakers/submit-talk'},
@@ -598,10 +598,10 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
     ]],
     ['About', [
       {title: 'About The Conference', url: 'about/'},
-      {title: 'Register', url: 'about/registration'},
-      {title: 'Privacy Policy', url: 'about/privacy-policy'},
-      {title: 'Code of Conduct', url: 'about/code-of-conduct'},
-      {title: 'Diversity Statement', url: 'about/diversity-statement'},
+      {title: 'Register', url: 'about/registration.html'},
+      {title: 'Privacy Policy', url: 'about/privacy-policy.html'},
+      {title: 'Code of Conduct', url: 'about/code-of-conduct.html'},
+      {title: 'Diversity Statement', url: 'about/diversity-statement.html'},
       {title: 'Frequently Asked Questions', url: 'about/faq.html'}
     ]],
     ['Community', [
@@ -829,6 +829,10 @@ pytx.controller('PageCtrl', function($scope, $route, marked, $http) {
   $scope.set_title($route.current.$$route.title);
   
   var path = $route.current.$$route.originalPath.replace('.html', '');
+  if (path.endsWith("/")) {
+    path = path.slice(0, path.length - 1);
+  }
+  
   $scope.page_url = CONFIG.dir + 'pages' + path + '.md';
   $scope.page_source = '';
   
