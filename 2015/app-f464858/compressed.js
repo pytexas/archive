@@ -582,19 +582,19 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
   
   $rootScope.menu = [
     ['Sponsors', [
-      {title: 'Become A Sponsor', url: 'sponsors/prospectus'},
-      {title: 'Our Sponsors', url: 'sponsors'},
+      {title: 'Become A Sponsor', url: 'sponsors/prospectus.html'},
+      {title: 'Our Sponsors', url: 'sponsors/'},
     ]],
-    ['Schedule', {url: 'schedule'}],
+    ['Schedule', {url: 'schedule.html'}],
     /*['Speakers', [
       {title: 'Call For Proposals', url: 'speakers/call-for-proposals'},
       {title: 'Submit A Talk', url: 'speakers/submit-talk'},
       {title: 'Proposed Talks', url: 'speakers/proposals'},
     ]],*/
     ['Venue', [
-      {title: 'The Venue', url: 'venue'},
-      {title: 'Hotels', url: 'venue/hotels'},
-      {title: 'Map & Parking', url: 'venue/map'},
+      {title: 'The Venue', url: 'venue/'},
+      {title: 'Hotels', url: 'venue/hotels.html'},
+      {title: 'Map & Parking', url: 'venue/map.html'},
     ]],
     ['About', [
       {title: 'About The Conference', url: 'about/'},
@@ -606,15 +606,15 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
     ]],
     ['Community', [
       {title: 'Chat Room', fullurl: 'https://gitter.im/pytexas/PyTexas'},
-      {title: 'Mailing List', url: 'community/mailing-list'},
-      {title: 'Local Python Meetups', url: 'community/meetups'},
-      {title: 'Python Employers', url: 'community/employers'}
+      {title: 'Mailing List', url: 'community/mailing-list.html'},
+      {title: 'Local Python Meetups', url: 'community/meetups.html'},
+      {title: 'Python Employers', url: 'community/employers.html'}
     ]],
     ['Blog', {url: 'blog'}],
     ['My Account', [
-      {title: 'My Talks', url: 'user/my-talks'},
-      {title: 'Profile', url: 'user/my-profile'},
-      {title: 'Profile Image', url: 'user/my-avatar'}
+      {title: 'My Talks', url: 'user/my-talks.html'},
+      {title: 'Profile', url: 'user/my-profile.html'},
+      {title: 'Profile Image', url: 'user/my-avatar.html'}
     ]]
   ];
 });
@@ -644,37 +644,37 @@ pytx.config(function ($routeProvider) {
       controller:'HomeCtrl',
       templateUrl: tpl('home.html'),
     })
-    .when('/sponsors', {
+    .when('/sponsors/', {
       controller:'SponsorCtrl',
       templateUrl: tpl('sponsors.html'),
       title: 'Our Sponsors'
     })
-    .when('/sponsors/prospectus', {
+    .when('/sponsors/prospectus.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Sponsor Prospectus'
     })
-    .when('/about', {
+    .when('/about/', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'About The Conference'
     })
-    .when('/about/privacy-policy', {
+    .when('/about/privacy-policy.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Privacy Policy'
     })
-    .when('/about/code-of-conduct', {
+    .when('/about/code-of-conduct.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Code of Conduct'
     })
-    .when('/about/diversity-statement', {
+    .when('/about/diversity-statement.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Diversity Statement'
     })
-    .when('/about/registration', {
+    .when('/about/registration.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Registration Info'
@@ -685,117 +685,117 @@ pytx.config(function ($routeProvider) {
       title: 'Frequently Asked Questions'
     })
     
-    .when('/community/meetups', {
+    .when('/community/meetups.html', {
       controller: 'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Local Python Meetups'
     })
     
-    .when('/community/employers', {
+    .when('/community/employers.html', {
       controller: 'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Texas Python Employers'
     })
     
-    .when('/community/mailing-list', {
+    .when('/community/mailing-list.html', {
       controller: 'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Mailing List'
     })
     
-    .when('/venue', {
+    .when('/venue/', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'The Venue'
     })
-    .when('/venue/hotels', {
+    .when('/venue/hotels.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Hotels'
     })
-    .when('/venue/map', {
+    .when('/venue/map.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Map'
     })
     
-    .when('/speakers/call-for-proposals', {
+    .when('/speakers/call-for-proposals.html', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Call for Proposals'
     })
-    .when('/speakers/proposals', {
+    .when('/speakers/proposals.html', {
       controller:'ProposedTalksCtrl',
       templateUrl: tpl('speakers/proposed-talks.html')
     })
-    .when('/speakers/submit-talk', {
+    .when('/speakers/submit-talk.html', {
       controller:'SubmitTalkCtrl',
       templateUrl: tpl('speakers/submit-talk.html')
     })
-    .when('/talk/:id', {
+    .when('/talk/:id.html', {
       controller:'TalkDetailCtrl',
       templateUrl: tpl('speakers/talk-detail.html')
     })
-    .when('/videos', {
+    .when('/videos/', {
       controller:'VideosCtrl',
       templateUrl: tpl('speakers/videos.html')
     })
-    .when('/schedule', {
+    .when('/schedule/', {
       controller:'ScheduleCtrl',
       templateUrl: tpl('speakers/schedule.html')
     })
     
-    .when('/user/login', {
+    .when('/user/login.html', {
       controller:'LoginCtrl',
       templateUrl: tpl('users/login.html')
     })
-    .when('/user/my-talks', {
+    .when('/user/my-talks.html', {
       controller:'TalkListCtrl',
       templateUrl: tpl('users/my-talks.html')
     })
-    .when('/user/my-profile', {
+    .when('/user/my-profile.html', {
       controller:'ProfileCtrl',
       templateUrl: tpl('users/my-profile.html')
     })
-    .when('/user/my-avatar', {
+    .when('/user/my-avatar.html', {
       controller:'AvatarCtrl',
       templateUrl: tpl('users/my-avatar.html')
     })
-    .when('/user/talk/:id', {
+    .when('/user/talk/:id.html', {
       controller:'EditTalkCtrl',
       templateUrl: tpl('users/edit-talk.html')
     })
-    .when('/user/sign-up', {
+    .when('/user/sign-up.html', {
       controller:'SignUpCtrl',
       templateUrl: tpl('users/sign-up.html')
     })
-    .when('/user/reset-password', {
+    .when('/user/reset-password.html', {
       controller:'ResetCtrl',
       templateUrl: tpl('users/reset-password.html')
     })
-    .when('/user/verify', {
+    .when('/user/verify.html', {
       controller:'VerifyCtrl',
       templateUrl: tpl('users/verify.html')
     })
-    .when('/user/:username', {
+    .when('/user/:username.html', {
       controller:'UserDetailCtrl',
       templateUrl: tpl('users/user-detail.html')
     })
     
-    .when('/blog', {
+    .when('/blog/', {
       controller:'BlogCtrl',
       templateUrl: tpl('blog/index.html')
     })
-    .when('/blog/:slug', {
+    .when('/blog/:slug.html', {
       controller:'BlogPostCtrl',
       templateUrl: tpl('blog/post-detail.html')
     })
-    .when('/blog/category/:cat', {
+    .when('/blog/category/:cat.html', {
       controller:'BlogCtrl',
       templateUrl: tpl('blog/index.html')
     })
     
-    .when('/prizes', {
+    .when('/prizes/', {
       controller:'PrizeCtrl',
       templateUrl: tpl('prizes.html')
     })
