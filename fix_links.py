@@ -10,8 +10,11 @@ def run (fps):
     with open(fp, 'r') as fh:
       html = fh.read()
       
-    html = re.sub('[\./]+/static/', '/2013/static/', html)
-    html = re.sub('[\./]+/media/', '/2013/media/', html)
+    # html = re.sub('[\./]+/static/', '/2013/static/', html)
+    # html = re.sub('[\./]+/media/', '/2013/media/', html)
+    
+    new_favi = '<link rel="shortcut icon" href="/favicon.ico">'
+    html = re.sub('<.*?shortcut icon.*?>', new_favi, html)
     
     with open(fp, 'w') as fh:
       fh.write(html)
