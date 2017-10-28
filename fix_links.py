@@ -63,7 +63,8 @@ def run (fps):
     
     # html = re.sub('/profile/(.*?)"', profile_replace, html)
     
-    html = re.sub('/static/', '/2014/static/', html)
+    # html = re.sub('/static/', '/2014/static/', html)
+    html = re.sub('[\./]+/www.google-analytics.com/', '//www.google-analytics.com/', html)
     
     with open(fp, 'w') as fh:
       fh.write(html)
