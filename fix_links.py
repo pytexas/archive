@@ -15,6 +15,16 @@ def replace_external (mobj):
     
   return '="{}"'.format(url)
   
+def replace_external2 (mobj):
+  url = mobj.group(1)
+  if 'pytexas.org' in url:
+    url = url.replace('http://archive.pytexas.org', '/2014')
+    
+  else:
+    pass
+    
+  return "='{}'".format(url)
+  
 def run (fps):
   for fp in fps:
     with open(fp, 'r') as fh:
@@ -25,7 +35,8 @@ def run (fps):
     # new_favi = '<link rel="shortcut icon" href="/favicon.ico">'
     # html = re.sub('<.*?shortcut icon.*?>', new_favi, html)
     
-    html = re.sub('=".*?external\.html\?link=(.*?)"', replace_external, html)
+    # html = re.sub('=".*?external\.html\?link=(.*?)"', replace_external, html)
+    html = re.sub("='.*?external\.html\?link=(.*?)'", replace_external2, html)
     
     with open(fp, 'w') as fh:
       fh.write(html)
