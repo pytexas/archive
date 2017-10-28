@@ -3,12 +3,12 @@
 </div>
 <div ng-hide="APIService.loading" class="Talk content-page">
   <h1>{{ talk.name }}</h1>
-  <a href="/{{ conf }}/user/{{ talk.user.username }}" class="user">
+  <a href="/{{ conf }}/user/{{ talk.user.username }}.html" class="user">
     <img src="{{ talk.user.image }}" alt="{{ talk.user.username }}">
   </a>
   <div class="details">
     <div>
-      by <a href="/{{ conf }}/user/{{ talk.user.username }}">{{ talk.user.username }}</a>
+      by <a href="/{{ conf }}/user/{{ talk.user.username }}.html">{{ talk.user.username }}</a>
     </div>
     <div>Type: {{ talk.stype }}</div>
     <div>Level: {{ talk.level }}</div>

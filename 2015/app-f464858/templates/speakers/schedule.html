@@ -14,11 +14,11 @@
             <div class="room" ng-repeat="(room_key, room) in hour.rooms" flex="{{ hour.flex_pc }}" flex-order="{{ room.flex_order }}" flex-order-sm="1" flex-sm="100" layout="column">
               <div class="talk talk{{ talk.duration }}" ng-repeat="talk in room.talks" flex>
                 <h3>
-                  <a href="/{{ conf }}/talk/{{ talk.id }}">{{ talk.name }}</a>
+                  <a href="/{{ conf }}/talk/{{ talk.id }}.html">{{ talk.name }}</a>
                 </h3>
                 <ul>
                   <li class="by" ng-if="talk.user && talk.user.username != 'TBA'">
-                    by <a href="/{{ conf }}/user/{{ talk.user.username }}">
+                    by <a href="/{{ conf }}/user/{{ talk.user.username }}.html">
                       {{ talk.user.username }}<span ng-if="talk.user.name"> ({{ talk.user.name }})</span>
                     </a>
                   </li>
