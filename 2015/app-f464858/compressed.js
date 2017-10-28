@@ -597,12 +597,12 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
       {title: 'Map & Parking', url: 'venue/map'},
     ]],
     ['About', [
-      {title: 'About The Conference', url: 'about'},
+      {title: 'About The Conference', url: 'about/'},
       {title: 'Register', url: 'about/registration'},
       {title: 'Privacy Policy', url: 'about/privacy-policy'},
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
       {title: 'Diversity Statement', url: 'about/diversity-statement'},
-      {title: 'Frequently Asked Questions', url: 'about/faq'}
+      {title: 'Frequently Asked Questions', url: 'about/faq.html'}
     ]],
     ['Community', [
       {title: 'Chat Room', fullurl: 'https://gitter.im/pytexas/PyTexas'},
@@ -679,7 +679,7 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('page.html'),
       title: 'Registration Info'
     })
-    .when('/about/faq', {
+    .when('/about/faq.html', {
       controller: 'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Frequently Asked Questions'
@@ -828,7 +828,8 @@ pytx.controller('HomeCtrl', function($scope, APIFactory) {
 pytx.controller('PageCtrl', function($scope, $route, marked, $http) {
   $scope.set_title($route.current.$$route.title);
   
-  $scope.page_url = CONFIG.dir + 'pages' + $route.current.$$route.originalPath + '.md';
+  var path = $route.current.$$route.originalPath.replace('.html', '');
+  $scope.page_url = CONFIG.dir + 'pages' + path + '.md';
   $scope.page_source = '';
   
   $http.get($scope.page_url)
