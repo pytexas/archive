@@ -61,7 +61,9 @@ def run (fps):
     
     # html = re.sub('[\./]+/secure.gravatar.com/', 'https://secure.gravatar.com/', html)
     
-    html = re.sub('/profile/(.*?)"', profile_replace, html)
+    # html = re.sub('/profile/(.*?)"', profile_replace, html)
+    
+    html = re.sub('/static/', '/2014/static/', html)
     
     with open(fp, 'w') as fh:
       fh.write(html)
