@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    
+<!-- Mirrored from 2013.pytexas.org/2013/talks/42/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 19 Oct 2017 23:34:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <title>Bugs: Can&#39;t code without them, so code against them! - PyTexas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="PyTexas Website">
+        
+
+        <!-- Le styles -->
+        
+        <link href="../../../static/css/bootstrap8e42.css" rel="stylesheet">
+        <link href="../../../static/css/bootstrap-responsive8e42.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        
+
+
+        
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../../../../external.html?link=http://2013.pytexas.org/static/favicon.ico">
+        
+        
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-33022897-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+
+    <body>
+        
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu
+                    </a>
+                    <a class="brand" href="../../../../external.html?link=http://2013.pytexas.org/"><img src="../../../static/img/logo.png">PyTexas</a>
+                    <div class="nav-collapse">
+                        <ul class="nav pull-right">
+                            
+                            
+
+<li class="dropdown">
+    <a href="../../index.html"
+        class="dropdown-toggle"
+        data-target="dropdown-menu-40"
+        >2013
+    </a>
+	
+    <ul class="dropdown-menu" id="dropdown-menu-40">
+        
+
+<li class="">
+    <a href="../../schedule/index.html">Schedule
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+<li class="">
+    <a href="../../about/index.html">About
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+<li class="">
+    <a href="../../sponsor/index.html">Sponsor
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+<li class="">
+    <a href="../../register/index.html">Registration
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+<li class="">
+    <a href="../../venue/index.html">Venue
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+<li class="">
+    <a href="../index.html">Speak
+    </a>
+	
+</li>
+<li class="nav-delimeter">/</li>
+
+
+    </ul>
+    
+</li>
+<li class="nav-delimeter">/</li>
+
+
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle login"
+                                    data-toggle="dropdown">
+                                    
+                                     Login
+                                    
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="../../../../external.html?link=http://2013.pytexas.org/registration/login/">Sign in locally</a></li>
+<li><a href="../../../../external.html?link=http://2013.pytexas.org/registration/password/reset/">Reset your password</a></li>
+<li class="divider"></li>
+<li><a href="../../../../external.html?link=http://2013.pytexas.org/social/login/twitter/">
+    <img src="../../../static/img/login/twitter.png"
+        alt="Sign in with Twitter" />
+</a></li>
+<li><a href="../../../../external.html?link=http://2013.pytexas.org/social/login/google/">
+    <img src="../../../static/img/login/google.png"
+        alt="Sign in with Google" />
+</a></li>
+<li><a href="../../../../external.html?link=http://2013.pytexas.org/social/login/linkedin/">
+    <img src="../../../static/img/login/linkedin.png"
+        alt="Sign in with LinkedIn" />
+</a></li>
+<li class="divider"></li>
+<li><a href="../../../../external.html?link=http://2013.pytexas.org/registration/register/">Create an account</a></li>
+
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+
+<div class="row">
+    <span class="span12 banner">
+        
+
+
+<img class="plugin_picture"
+    
+        style="display: block; margin-left: auto; margin-right: auto"
+    
+    src="../../../media/cms/1/banner-msc-4.png" alt="" />
+
+
+
+
+    </span>
+</div>
+
+
+<div class="row">
+    <div class="span3">
+        
+<ul class="nav nav-pills nav-stacked left-menu">
+
+<li class="sibling">
+	<a href="../../schedule/index.html">Schedule</a>
+	
+</li>
+
+<li class="sibling">
+	<a href="../../about/index.html">About</a>
+	
+    <ul>
+        
+
+<li class="">
+	<a href="../../about/diversity/index.html">Diversity</a>
+	
+</li>
+
+<li class="">
+	<a href="../../about/conduct/index.html">Code of Conduct</a>
+	
+</li>
+
+<li class="">
+	<a href="../../about/privacy/index.html">Privacy Policy</a>
+	
+</li>
+
+<li class="">
+	<a href="../../about/community/index.html">Community</a>
+	
+    <ul>
+        
+
+<li class="">
+	<a href="../../about/community/employers/index.html">Employers</a>
+	
+</li>
+
+
+    </ul>
+    
+</li>
+
+<li class="">
+	<a href="../../about/volunteer/index.html">Volunteer</a>
+	
+</li>
+
+
+    </ul>
+    
+</li>
+
+<li class="sibling">
+	<a href="../../sponsor/index.html">Sponsor</a>
+	
+    <ul>
+        
+
+<li class="">
+	<a href="../../sponsor/sponsors/index.html">Sponsors</a>
+	
+</li>
+
+
+    </ul>
+    
+</li>
+
+<li class="sibling">
+	<a href="../../register/index.html">Registration</a>
+	
+    <ul>
+        
+
+<li class="">
+	<a href="../../register/registrations/index.html">My Registrations</a>
+	
+</li>
+
+
+    </ul>
+    
+</li>
+
+<li class="sibling">
+	<a href="../../venue/index.html">Venue</a>
+	
+    <ul>
+        
+
+<li class="">
+	<a href="../../venue/hotel-blocks/index.html">Hotel Blocks</a>
+	
+</li>
+
+
+    </ul>
+    
+</li>
+
+<li class="selected">
+	<a href="../index.html">Speak</a>
+	
+</li>
+
+</ul>
+
+
+
+
+    </div>
+    <div class="span6">
+        
+<h1>PyTexas 2013</h1>
+<h2>Bugs: Can&#39;t code without them, so code against them!</h2>
+<h3>Over the last 10 years, Luke Lee has professionally written software for
+applications ranging from Python desktop and web applications to embedded C
+drivers for Solid State Disks.  Currently, he writes scientific Python
+applications for Blueback Reservoir in Houston, TX.  
+
+His enthusiasm for Python is emphasized throughout his presentations at several
+Python related conferences including Pycon, PyTexas, and PyArkansas.  He is
+also an active member of the Houston Django and Python user groups.</h3>
+<p><p>There are a lot of approaches and philosophies to prevent bugs in software, but<br />the truth is they are unavoidable in complex, modern systems.  So, what&#39;s a<br />developer to do?  Code in a style that tries to alert and test for the bugs<br />when they happen instead of feeling like a failure when you can&#39;t prevent the<br />unavoidable.</p>
+
+<p>Wikipedia defines this style of programming as &#39;defensive programming,&#39; and the<br />idea is code in a way that expects software to be misused and have bugs.  This<br />talk will explore this general concept and how to add bits of this style of<br />development to you Python code with the following:<br />    - Asserts<br />    - Logging<br />    - Unit tests</p>
+
+<p>Preferably a 25 minute talk, but could be easily expanded to 50 minutes if necessary for scheduling.</p></p>
+<p>Status: Accepted</p>
+
+    </div>
+    <div class="span3">
+        
+
+
+
+
+    </div>
+</div>
+
+
+            
+            
+            <div class="footer">
+                
+
+<p style="text-align: center;"> </p>
+<p style="text-align: center;">Follow <a href="../../../../external.html?link=http://twitter.com/pytexas" title="PyTexas on Twitter">@pytexas</a> on twitter.</p>
+<p style="text-align: center;">This site built using <a href="../../../../external.html?link=http://djangoproject.com/">Django</a>, <a href="../../../../external.html?link=https://www.django-cms.org/">Django CMS</a> and <a href="../../../../external.html?link=http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+<p style="text-align: center;"><a href="../../../../external.html?link=http://rackspace.com/">
+<img class="plugin_picture"
+    
+        style="float:None"
+    
+    src="../../../media/cms/1/rackspace-160.png" alt="Powered by Rackspace" />
+</a>
+</p>
+<p style="text-align: center;"><a href="../../../../external.html?link=http://2013.pytexas.org/2012/about/privacy/">Privacy Policy</a> | <a href="../../../../external.html?link=http://2013.pytexas.org/2012/about/conduct/">Code of Conduct</a></p>
+
+
+            </div>
+            
+
+        </div> <!-- /container -->
+        
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../../static/js/jquery-1.7.2.min.js"></script>
+        <script src="../../../static/js/bootstrap-transition.js"></script>
+        <script src="../../../static/js/bootstrap-alert.js"></script>
+        <script src="../../../static/js/bootstrap-modal.js"></script>
+        <script src="../../../static/js/bootstrap-dropdown.js"></script>
+        <script src="../../../static/js/bootstrap-scrollspy.js"></script>
+        <script src="../../../static/js/bootstrap-tab.js"></script>
+        <script src="../../../static/js/bootstrap-tooltip.js"></script>
+        <script src="../../../static/js/bootstrap-popover.js"></script>
+        <script src="../../../static/js/bootstrap-button.js"></script>
+        <script src="../../../static/js/bootstrap-collapse.js"></script>
+        <script src="../../../static/js/bootstrap-carousel.js"></script>
+        <script src="../../../static/js/bootstrap-typeahead.js"></script>
+        
+        
+
+    </body>
+
+<!-- Mirrored from 2013.pytexas.org/2013/talks/42/ by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 19 Oct 2017 23:34:31 GMT -->
+</html>
