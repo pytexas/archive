@@ -1,0 +1,100 @@
+/* set the page background */
+body {
+    background-color: #f5f5dc; /* beige */
+}
+
+/* style the header section */
+header {
+    background-color: #002868; /* dark blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Rock Salt', cursive;
+}
+
+/* style the navigation section */
+nav {
+    background-color: #d3d3d3; /* light gray */
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #002868;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* style the main section */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main h2 {
+    color: #002868;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin-top: 0;
+}
+
+main p {
+    line-height: 1.5;
+}
+
+main ul {
+    margin: 0;
+    padding-left: 50px;
+}
+
+main li {
+    margin-bottom: 10px;
+}
+
+main a {
+    color: #dc143c; /* crimson */
+    font-weight: bold;
+}
+
+/* style the footer section */
+footer {
+    background-color: #002868; /* dark blue */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* add custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
